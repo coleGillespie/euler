@@ -11,6 +11,7 @@ four million, find the sum of the even-valued terms.
 var fibArr = [0,1];
 var i=2;
 
+// build the fib array less than 4 million
 while( i < 100){
   var a = fibArr[i-2];
   var b = fibArr[i-1];
@@ -23,9 +24,11 @@ while( i < 100){
   }
 }
 
+// remove the first two values since they are duplicates
 fibArr.shift()
 fibArr.shift()
 
+// build the sum of only the even numbers using a modulo opperation
 var sum = 0
 for(var j=0; j < fibArr.length; j++){
   if((fibArr[j] / 2) % 1 === 0){
